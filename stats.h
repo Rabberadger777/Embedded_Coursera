@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief Header file for first coursera assignement
  *
- * <Add Extended Description Here>
+ * Formatted header file
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Dan Lannan
+ * @date 05/04/2020
  *
  */
 #ifndef __STATS_H__

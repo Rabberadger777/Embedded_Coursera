@@ -1,5 +1,4 @@
-/******************************************************************************
- * Copyright (C) 2017 by Alex Fosdick - University of Colorado
+/*
  *
  * Redistribution, modification or use of this software in source or binary
  * forms is permitted as long as the files maintain this copyright. Users are 
@@ -9,13 +8,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Implementation file of stats.h
  *
- * <Add Extended Description Here>
+ * First coursera lesson
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Dan Lannan 
+ * @date 05/04/2020
  *
  */
 
@@ -41,3 +40,31 @@ void main() {
 }
 
 /* Add other Implementation File Code Here */
+void print_array(unsigned char arr[], unsigned int len){
+
+};
+
+void print_statistics(unsigned char arr[], unsigned int len){
+
+};
+
+unsigned char find_median(unsigned char arr[], unsigned int len){
+
+};
+
+unsigned char find_mean(unsigned char arr[], unsigned int len){
+
+};
+
+unsigned char find_maximmum(unsigned char arr[], unsigned int len){
+
+};
+
+unsigned char find_minimum(unsigned char arr[], unsigned int len){
+
+};
+
+unsigned char sort_array(unsigned char arr[], unsigned int len){
+
+};
+
