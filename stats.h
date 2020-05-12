@@ -80,7 +80,7 @@ unsigned char find_mean(unsigned char arr[], unsigned int len);
  * @return The maximum of the target array
  * 
  */
-unsigned char find_maximmum(unsigned char arr[], unsigned int len);
+unsigned char find_maximum(unsigned char arr[], unsigned int len);
 
 /**
  * @brief Find the minimum of the array
@@ -101,7 +101,7 @@ unsigned char find_minimum(unsigned char arr[], unsigned int len);
  * @return The minimum of the target array
  *  
  */
-unsigned char sort_array(unsigned char arr[], unsigned int len);
+unsigned char * sort_array(unsigned char arr[], unsigned int len);
 
 
 

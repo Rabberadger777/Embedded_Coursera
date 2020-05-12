@@ -37,34 +37,94 @@ void main() {
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
 
+  print_statistics(test, SIZE);
+  
 }
 
 /* Add other Implementation File Code Here */
 void print_array(unsigned char arr[], unsigned int len){
+  int i;
 
+  for(i = 0; i < len; i++){
+    printf("%d ", arr[i]);
+  }
+  printf("\n");
 };
 
 void print_statistics(unsigned char arr[], unsigned int len){
+  // Get minimum
+  unsigned char minimum = find_minimum(arr, len);
+  // Get maximum
+  unsigned char maximum = find_maximum(arr, len);
+  // Get mean
+  unsigned char mean = find_mean(arr, len);
+  // Get median
+  unsigned char median = find_median(arr, len);
 
+  // Print the statistics
+  printf("The array statistics are:\n");
+  printf("Minimum: %d\n", minimum);
+  printf("Maximum is: %d\n", maximum);
+  printf("Mean: %d\n", mean);
+  printf("Median: %d\n", median);
 };
 
 unsigned char find_median(unsigned char arr[], unsigned int len){
-
+  /* Declare local function variables*/
+  unsigned char median;
+  unsigned char mid;
+  /* Write function */
+  if (len%2 == 0){
+    mid = len/2;
+    median = ( arr[mid] + arr[mid+1] ) / 2;
+  }
+  else{
+    mid = mid/2;
+    median = ( arr[mid] );
+  }
+  return median;
 };
 
 unsigned char find_mean(unsigned char arr[], unsigned int len){
+  /* Declare local function variables */
+  unsigned int sum = 0;
+  int i;
 
+  for(i = 0; i<len; i++){
+    sum = (unsigned int) (sum + arr[i]);
+  }
+  sum /= len;
+  return sum;
 };
 
-unsigned char find_maximmum(unsigned char arr[], unsigned int len){
-
+unsigned char find_maximum(unsigned char arr[], unsigned int len){
+  /* Declare local function variables*/
+  unsigned char * sorted = sort_array(arr, len);
+  unsigned char maximum = sorted[0];
+  return maximum;
+  
 };
 
 unsigned char find_minimum(unsigned char arr[], unsigned int len){
-
+  /* Declare local function variables */
+  unsigned char * sorted = sort_array(arr, len);
+  unsigned char minimum = sorted[len-1];
+  return minimum;
 };
 
-unsigned char sort_array(unsigned char arr[], unsigned int len){
-
+unsigned char * sort_array(unsigned char arr[], unsigned int len){
+  /* Declare local function variables*/
+  unsigned char temp;
+  int i; int j; 
+  for (i=0; i < len; i++){
+    for(j = i+1; j < len; j++){
+      if ( arr[i] < arr[j] ){
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
 };
 
